@@ -11,22 +11,35 @@
         //To get margin for adjustment
         videoThumbnailAdjustService.getMargin = function(bodyWidth, containerWidth) {
             if(bodyWidth > 1000) {
-                return 0;
+                return {
+                    width: 224,
+                    margin: 0
+                };
+            }
+            if(bodyWidth / 2 < 214) {
+                return {
+                    width: bodyWidth / 2,
+                    margin: 0
+                };
             }
             var maxInRow = Math.floor(containerWidth / 224);
-            return Math.floor(((containerWidth - (maxInRow * 224)) / maxInRow)) / 2;
+            return {
+                width: 224,
+                margin: Math.floor(((containerWidth - (maxInRow * 224)) / maxInRow)) / 2
+            };
         };
         
         //adjust video thumbnail
         videoThumbnailAdjustService.adjustThumbnails = function(videos) {
             var bodyWidth = angular.element('body').width();
             var containerWidth = angular.element('.container').width();
-            var margin = videoThumbnailAdjustService.getMargin(bodyWidth, containerWidth);
+            var adjustment = videoThumbnailAdjustService.getMargin(bodyWidth, containerWidth);
             angular.forEach(videos, function(video) {
                 var item = angular.element('#' + video.id );
                 if (item) {
-                    item.css('margin-left',  margin + 'px');
-                    item.css('margin-right',  margin + 'px');
+                    item.css('width',  adjustment.width + 'px');
+                    item.css('margin-left',  adjustment.margin + 'px');
+                    item.css('margin-right',  adjustment.margin + 'px');
                 }
             });
         };
