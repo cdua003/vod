@@ -5,34 +5,46 @@ describe("Unit: data validation Services", function() {
         var service = $injector.get( 'videoThumbnailAdjustService' );
         
 
-        it('should return 0 while body width bigger than 1000 - margin adjustment', function(){
+        it('case 1 - margin adjustment', function(){
             var result = service.getMargin(1001, 0);
-            expect(result).toEqual(0);
+            expect(result.width).toEqual(224);
+            expect(result.margin).toEqual(0);
         })
 
-        it('should return 0 while body width bigger than 1000 - margin adjustment', function(){
+        it('case 2 - margin adjustment', function(){
             var result = service.getMargin(1001, 1000);
-            expect(result).toEqual(0);
+            expect(result.width).toEqual(224);
+            expect(result.margin).toEqual(0);
         })
 
-        it('should return 13 while body width less equal to 1000 but container width equal to 1000 - margin adjustment', function(){
+        it('case 3 - margin adjustment', function(){
             var result = service.getMargin(0, 1000);
-            expect(result).toEqual(13);
+            expect(result.width).toEqual(0);
+            expect(result.margin).toEqual(0);
         })
 
-        it('should return 13 while body width less equal to 1000 but container width equal to 1000 - margin adjustment', function(){
+        it('case 4 - margin adjustment', function(){
             var result = service.getMargin(1000, 1000);
-            expect(result).toEqual(13);
+            expect(result.width).toEqual(224);
+            expect(result.margin).toEqual(13);
         })
 
-        it('should return 13 while body width less equal to 1000 but container width equal to 999 - margin adjustment', function(){
+        it('case 5 - margin adjustment', function(){
             var result = service.getMargin(0, 999);
-            expect(result).toEqual(12.5);
+            expect(result.width).toEqual(0);
+            expect(result.margin).toEqual(0);
         })
 
-        it('should return 13 while body width less equal to 1000 but container width equal to 999 - margin adjustment', function(){
+        it('case 6 - margin adjustment', function(){
             var result = service.getMargin(1000, 999);
-            expect(result).toEqual(12.5);
+            expect(result.width).toEqual(224);
+            expect(result.margin).toEqual(12.5);
+        })
+
+        it('case 7 - margin adjustment', function(){
+            var result = service.getMargin(400, 430);
+            expect(result.width).toEqual(200);
+            expect(result.margin).toEqual(0);
         })
     });
 });
