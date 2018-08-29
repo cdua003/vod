@@ -1,0 +1,25 @@
+<div tabIndex="1" ng-keydown="vc.onKeyDown($event)" container-focus="focusOnSaveInput" on-size-changed="vc.resize" ng-init="vc.init()">
+    <div class="navbar navbar-custom">
+        <a class="header-left navbar-brand" ng-disabled="vc.videoMode" ng-click="vc.switchViewMode()">Home</a>
+        <a class="header-left navbar-brand" ng-disabled="!vc.videoMode" ng-click="vc.switchViewMode()">History</a>
+        <a class="header-right navbar-brand" ng-click="vc.init()">Refresh</a>
+    </div>
+    <div>
+        <div class="container">
+            <div ng-repeat="video in vc.videos | filter: vc.videoToShow | orderBy:vc.sorting.orderBy:vc.sorting.sortReverse" ng-attr-id="{{video.id}}" ng-class="video.selected? 'thumbnail video-selected' : 'thumbnail'" ng-click="vc.selectVideo(video)" on-finish-render="ngRepeatFinished">
+                <div class="header">
+                    <h4 class="header-container">
+                       {{video.title}}
+                    </h4>
+                </div>
+                <img class="image" ng-attr-id="{{'img_' + video.id}}" ng-src="{{vc.getImage(video)}}" alt="Cover not found or loaded" image-load="vc.saveImage(video.id)"/>
+                <div class="footer">
+                    <span class="footer-container">
+                        {{video.description}}
+                    </span>
+                </div>
+                <a href="#" class="btn btn-primary" ng-click="vc.play(video)" role="button">Play</a>
+            </div> 
+        </div>
+    </div>
+</div>

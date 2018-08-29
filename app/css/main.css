@@ -1,0 +1,151 @@
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+.navbar-custom {
+    background-color:#808080;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom > a {
+    color:#fff;
+    cursor: pointer;
+    
+}
+
+.navbar-custom > a:hover
+{
+    color: #337ab7;
+}
+
+a[disabled="disabled"] {
+    pointer-events: none;
+    color: #337ab7 !important;
+}
+
+/* .navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #808080;
+} */
+
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+
+.header-left{
+    display: inline-block;
+}
+.header-right{
+    float: right;
+}
+
+.thumbnail{
+    display: inline-block;
+    vertical-align: middle;
+    background-color: #403F3F;
+    width: 224px;
+    position: relative;
+}
+
+.thumbnail .image {
+    background: url('../../images/movies.jpg') no-repeat;
+    width: 100%;
+    height: 317px;
+    color: white;
+}
+
+.thumbnail:hover {
+    background-color: #352C2C;
+}
+
+*:focus{
+    outline: none;
+}
+
+.video-selected{
+    border: solid 4px #337ab7;
+}
+
+.thumbnail .footer {
+    padding: 9px;
+    color: #F3E6E6;
+}
+
+.thumbnail .header {
+    padding: 3px;
+    color: #F3E6E6;
+}
+
+.thumbnail .header-container{
+    text-align: center;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.thumbnail .footer-container{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden
+}
+
+.container{
+    width: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 440px) and (min-width: 0px) {
+   .thumbnail{
+        display: block;  
+        margin-left: 50px;          
+    }
+}
+
+@media screen and (max-width: 1000px) and (min-width: 440px) {
+    .container{
+        white-space: normal;
+    }
+}
+
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+}
+
+.full-screen{        
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width:100%;        
+    height:100%;   
+    margin:0px;     
+} 
+
+.modal-video{
+    width:70%;
+}
+
+
+

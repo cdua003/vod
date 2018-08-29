@@ -1,0 +1,13 @@
+<div class="modal fade" id="playerModal" ng-controller="playerController">
+    <div class="modal-dialog full-screen">
+        <div class="modal-content" ng-init="init()">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">{{video.title}}</h4>
+            </div>
+            <div class="modal-body">
+               <video class="modal-video" controls="" autoplay="" name="media"><source src="{{video.contentUrl}}" type="video/mp4"></video>
+            </div>
+        </div>
+    </div>
+</div>

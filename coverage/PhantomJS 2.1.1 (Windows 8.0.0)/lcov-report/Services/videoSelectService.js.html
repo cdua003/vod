@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for Services\videoSelectService.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">Services/</a> videoSelectService.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.02% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>4/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">16.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">7.02% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>4/57</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+    'use strict';
+&nbsp;
+    angular.module('app.videoSelectService', [])
+            .service('videoSelectService', videoSelectService);
+            videoSelectService.$inject = [];
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function videoSelectService() {</span>
+<span class="cstat-no" title="statement not covered" >        var videoSelectService = this;</span>
+<span class="cstat-no" title="statement not covered" >        var _keyHander = {</span>
+            LEFT: 37,
+            UP: 38,
+            RIGHT: 39,
+            DOWN: 40,
+            PLAY: 13,
+        };
+&nbsp;
+        //Get the video above the current selected
+<span class="cstat-no" title="statement not covered" >        var getAboveVideo = <span class="fstat-no" title="function not covered" >function(selectedVideo, videos) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var selectedItem = angular.element('#' + selectedVideo.id );</span>
+<span class="cstat-no" title="statement not covered" >            if (!selectedItem) {</span>
+<span class="cstat-no" title="statement not covered" >                return null;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            var selectedLeft = selectedItem.offset().left;</span>
+<span class="cstat-no" title="statement not covered" >            var selectedTop = selectedItem.offset().top;</span>
+<span class="cstat-no" title="statement not covered" >            for (var i = selectedVideo.index - 1; i &gt;= 0; i--) {</span>
+<span class="cstat-no" title="statement not covered" >                var nextItem = angular.element('#' + videos[i].id );</span>
+<span class="cstat-no" title="statement not covered" >                if(!nextItem) {</span>
+<span class="cstat-no" title="statement not covered" >                    continue;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                var nextLeft = nextItem.offset().left;</span>
+<span class="cstat-no" title="statement not covered" >                var nextTop = nextItem.offset().top;</span>
+<span class="cstat-no" title="statement not covered" >                if(Math.abs(selectedTop - nextTop) &lt;= 10) {</span>
+<span class="cstat-no" title="statement not covered" >                    continue;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                if(Math.abs(selectedLeft - nextLeft) &gt;= 10) {</span>
+<span class="cstat-no" title="statement not covered" >                    continue;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                return videos[i];</span>
+            }
+<span class="cstat-no" title="statement not covered" >            return null;</span>
+        };
+&nbsp;
+        //Get the video below the current selected
+<span class="cstat-no" title="statement not covered" >        var getBelowVideo = <span class="fstat-no" title="function not covered" >function(selectedVideo, videos) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var selectedItem = angular.element('#' + selectedVideo.id );</span>
+<span class="cstat-no" title="statement not covered" >            if (!selectedItem) {</span>
+<span class="cstat-no" title="statement not covered" >                return null;</span>
+            }
+<span class="cstat-no" title="statement not covered" >            var selectedLeft = selectedItem.offset().left;</span>
+<span class="cstat-no" title="statement not covered" >            var selectedTop = selectedItem.offset().top;</span>
+<span class="cstat-no" title="statement not covered" >            var belowList = [];</span>
+<span class="cstat-no" title="statement not covered" >            for(var i = selectedVideo.index + 1, max = videos.length; i &lt; max; i++) {</span>
+<span class="cstat-no" title="statement not covered" >                var nextItem = angular.element('#' + videos[i].id );</span>
+<span class="cstat-no" title="statement not covered" >                if (!nextItem) {</span>
+<span class="cstat-no" title="statement not covered" >                    continue;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                var nextLeft = nextItem.offset().left;</span>
+<span class="cstat-no" title="statement not covered" >                var nextTop = nextItem.offset().top;</span>
+<span class="cstat-no" title="statement not covered" >                if (Math.abs(selectedTop - nextTop) &lt;= 10) {</span>
+<span class="cstat-no" title="statement not covered" >                    continue;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                belowList.unshift(videos[i]);</span>
+<span class="cstat-no" title="statement not covered" >                if (Math.abs(selectedLeft - nextLeft) &gt;= 10) {</span>
+<span class="cstat-no" title="statement not covered" >                    continue;</span>
+                }
+<span class="cstat-no" title="statement not covered" >                return videos[i];</span>
+            }
+            //To get the last video if no video below the current
+<span class="cstat-no" title="statement not covered" >            return belowList.length === 0 ? null : belowList[0];</span>
+        };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        videoSelectService.toPlay = <span class="fstat-no" title="function not covered" >function(keyCode) {</span></span>
+<span class="cstat-no" title="statement not covered" >            return keyCode === _keyHander.PLAY;</span>
+        };
+&nbsp;
+        //Find next video to select by keyboard event
+<span class="cstat-no" title="statement not covered" >        videoSelectService.selectNext = <span class="fstat-no" title="function not covered" >function(keyCode, selectedVideo, videos) {</span></span>
+<span class="cstat-no" title="statement not covered" >            switch(keyCode) {</span>
+                //To select left video
+                case _keyHander.LEFT:{
+<span class="cstat-no" title="statement not covered" >                    if (selectedVideo.index === 0) {</span>
+<span class="cstat-no" title="statement not covered" >                        return null;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return videos[selectedVideo.index - 1];</span>
+                } 
+                //To select above video
+                case _keyHander.UP:{
+<span class="cstat-no" title="statement not covered" >                    return getAboveVideo(selectedVideo, videos);</span>
+                } 
+                //To select right video
+                case _keyHander.RIGHT:{
+<span class="cstat-no" title="statement not covered" >                    if (selectedVideo.index &gt;= videos.length - 1) {</span>
+<span class="cstat-no" title="statement not covered" >                        return null;</span>
+                    }
+<span class="cstat-no" title="statement not covered" >                    return videos[selectedVideo.index + 1];</span>
+                } 
+                //To select below video
+                case _keyHander.DOWN:{
+<span class="cstat-no" title="statement not covered" >                    return getBelowVideo(selectedVideo, videos);</span>
+                } 
+            }
+<span class="cstat-no" title="statement not covered" >            return null;</span>
+        };
+    }
+})();</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Aug 30 2018 00:06:25 GMT+1200 (新西兰标准时间)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

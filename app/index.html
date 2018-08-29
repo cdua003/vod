@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-strict-di class="no-js"></html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Media App VOD</title>
+        <meta name="description" content="Media App VOD">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="bower_components/jquery-ui/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/animate.css">
+    </head>
+    <body ng-controller="VideoController as vc">
+        <div>
+            <section ui-view="content"></section>
+            <footer ui-view="footer"></footer>
+            <div ng-include="'views/player_modal.html'"></div>
+        </div>
+        <!-- Bower scripts: -->
+        <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/underscore/underscore-min.js"></script>
+        <!-- Application scripts: -->
+        <script src="js/app.js"></script>
+        <script src="js/app.routes.js"></script>
+        <script src="js/app/directives/imageLoadDirective.js"></script>
+        <script src="js/app/directives/finishDirective.js"></script>
+        <script src="js/app/directives/resizeDirective.js"></script>
+        <script src="js/app/directives/containerFocusDirective.js"></script>
+        <script src="js/app/directives/aboutDirective.js"></script>
+        <script src="js/app/constants/constants.js"></script>
+        <script src="js/app/controllers/playerController.js"></script>
+        <script src="js/app/controllers/videoController.js"></script>
+        <script src="js/app/factory/videoFactory.js"></script>
+
+        <script src="js/app/Services/videoService.js"></script>
+        <script src="js/app/Services/videoSelectService.js"></script>
+        <script src="js/app/Services/videoThumbnailAdjustService.js"></script>
+        <script src="js/app/Services/videoScrollService.js"></script>
+
+    </body>
+</html>
