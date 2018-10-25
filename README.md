@@ -27,10 +27,3 @@ proportionally based on the desktop browser width.
 run on mobile device
 7. Content list refresh button. Each click reloads content from API
 8. Unit tests
-
-# hosting
-
-AWS: http://www.aisolutions.nz/vod/#!/video/list
-
-# Github
-https://github.com/cdua003/vod.git
